@@ -12,5 +12,9 @@ app.use (express.json());
 
 app.use('/api', require('./backend/src/routes/index'));
 
+app.get('/', function (req, res) {
+    res.sendfile('./frontend/src/index.html');
+  });
+
 app.listen (3000);
 console.log ('server on port', 3000);
