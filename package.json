@@ -1,9 +1,11 @@
 {
   "name": "main-app",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon app.js",
+    "start": "node ${SCRIPT:-app.js}",
+    "deploy": "gcloud preview app deploy app.yaml --promote"
   },
   "keywords": [],
   "author": "",
